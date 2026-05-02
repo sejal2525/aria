@@ -1,0 +1,41 @@
+{
+    "Latanoprost": {
+        "drug_class": "Prostaglandin analogue",
+        "mechanism": "Reduces IOP by increasing aqueous humor outflow",
+        "weeks_1_2": {
+            "expected_side_effects": [
+                "mild stinging",
+                "mild burning",
+                "temporary blurred vision"
+            ],
+            "severity": "low"
+        },
+        "weeks_3_8": {
+            "expected_side_effects": [
+                "eye redness",
+                "iris color change",
+                "burning sensation",
+                "eyelash growth"
+            ],
+            "severity": "low"
+        },
+        "weeks_9_plus": {
+            "expected_side_effects": [
+                "darkening around eye",
+                "mild dryness"
+            ],
+            "severity": "low"
+        },
+        "always_escalate": [
+            "severe pain",
+            "sudden vision loss",
+            "eye swelling",
+            "persistent headache",
+            "pain above 7/10"
+        ],
+        "contraindications": [
+            "pregnancy",
+            "sulfonamide allergy is not relevant for this drug"
+        ]
+    }
+}
