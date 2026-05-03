@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Chat from './pages/Chat';
 import Profile from './pages/Profile';
 import DoctorDashboard from './pages/DoctorDashboard';
+import AdherenceLog from './pages/AdherenceLog';
 
 function App() {
   return (
@@ -31,6 +32,11 @@ function App() {
               <Route path="/profile" element={
                 <ProtectedRoute>
                   <Profile />
+                </ProtectedRoute>
+              } />
+              <Route path="/adherence" element={
+                <ProtectedRoute>
+                  <AdherenceLog />
                 </ProtectedRoute>
               } />
               <Route path="/doctor" element={<DoctorDashboard />} />

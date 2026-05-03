@@ -247,5 +247,20 @@ def get_escalations():
     except Exception as e:
         return jsonify({"error": f"Firestore error: {str(e)}"}), 500
 
+@app.route('/drug_info/<drug_name>', methods=['GET'])
+def get_drug_info(drug_name):
+    try:
+        with open('drug_reference.json', 'r') as f:
+            drug_ref = json.load(f)
+        
+        if drug_name not in drug_ref:
+            return jsonify({"error": "Drug not found"}), 404
+            
+        return jsonify(drug_ref[drug_name])
+    except FileNotFoundError:
+        return jsonify({"error": "drug_reference.json not found"}), 500
+    except Exception as e:
+        return jsonify({"error": f"Error: {str(e)}"}), 500
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
